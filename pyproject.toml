@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lang-parsers"
+version = "0.1.0"
+description = "Deterministic language parsers for legacy code analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC BY-NC 4.0" }
+authors = [
+  { name = "Rolf Häsänen" }
+]
+dependencies = []
+
+[project.scripts]
+rpg-plex-parse = "parsers.rpg_plex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["parsers*"]
+namespaces = true
